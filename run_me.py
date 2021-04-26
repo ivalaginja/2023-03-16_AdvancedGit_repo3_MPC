@@ -15,12 +15,6 @@ def ft2d(func):
     return ft
 
 
-def ft1d_freq(x):
-    """Calculate the (spatial) frequency array based on the spatial array x."""
-    s = np.fft.fftshift(np.fft.fftfreq(x.size, d=x[-1]-x[-2]))
-    return s
-
-
 def padcplx(c, pad=5):
     """Puts a Complex array in the centre of a zero-filled Complex array.
     pad defines the padding multiplier for the output array."""
