@@ -11,5 +11,6 @@ dependencies:
   - pip
   - pytest
   - python=3.9
+  - scipy
   - pip:
       - poppy
