@@ -6,4 +6,5 @@ name: advanced-git
 dependencies:
   - matplotlib
   - numpy
+  - pandas
   - python=3.7
