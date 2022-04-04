@@ -2,7 +2,7 @@
 
 Welcome to **workflow 2** of the "Advanced Git for Astronomers" tutorial!
 
-With this repository, we  will be learning how to manage several active branches at a timem on a repository. We will 
+With this repository, we  will be learning how to manage several active branches at a time on a repository. We will 
 see how merge conflicts arise, how to solve them, and how to work in a way that tries to avoid them in the first place, 
 as best as possible.
 
