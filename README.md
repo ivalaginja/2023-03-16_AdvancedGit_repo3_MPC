@@ -2,7 +2,7 @@
 
 Welcome to **workflow 2** of the "Advanced Git for Astronomers" tutorial!
 
-With this repository, we  will be learning how to manage several active branches at a timem on a repository. We will 
+With this repository, we  will be learning how to manage several active branches at a time on a repository. We will 
 see how merge conflicts arise, how to solve them, and how to work in a way that tries to avoid them in the first place, 
 as best as possible.
 
@@ -10,7 +10,7 @@ We will also work through an example that shows how to provide a "conda recipe" 
 is needed to run the code on your repository.
 
 For further info, please contact:
-iva.laginja@lam.fr
+iva.laginja@obspm.fr
 
 If you want to sign up for announcements about further installments of our git courses, feel free to sign up for notifications here (Google form):
 https://forms.gle/CkofT5ASMpfYCYN17
