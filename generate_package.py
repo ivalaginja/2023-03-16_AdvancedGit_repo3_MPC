@@ -17,6 +17,13 @@ participants_default = [
     "pablordrrbl",
 ]
 
+# Add user000 till nusers as backup
+# in case somebody not in the form
+nusers = 5
+for i in range(nusers):
+    username =  f"user{i:03d}"
+    participantes_default.append(username)
+
 animals_list = [
     "cat",
     "dog",
