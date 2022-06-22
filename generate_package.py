@@ -6,11 +6,11 @@ Participants come from:
 """
 
 import configparser
+from pathlib import Path
 import random
 
 import pandas as pd
 
-from pathlib import Path
 
 participants_default = [
     "ivalaginja",
@@ -21,8 +21,8 @@ participants_default = [
 # in case somebody not in the form
 nusers = 5
 for i in range(nusers):
-    username =  f"user{i:03d}"
-    participantes_default.append(username)
+    username = f"user{i:03d}"
+    participants_default.append(username)
 
 animals_list = [
     "cat",
@@ -43,15 +43,17 @@ animals_list = [
     "raven",
 ]
 
-
+# Create directory for user files
 base_dir = Path(__file__).parent
 pkg_dir = base_dir / "mypackage"
 pkg_dir.mkdir(parents=True, exist_ok=True)
 
+# Read the participants' Github handles from the form
 form = base_dir / "form.csv"
 responses = pd.read_csv(form)
 participants = responses["GitHub handle"].to_list()
 participants.extend(participants_default)
+
 
 def generate_file(participant):
     fname = participant + ".ini"
@@ -77,6 +79,7 @@ def generate_file(participant):
 
     with open(fpath, "w") as f:
         config.write(f)
+
 
 for participant in participants:
     print(participant)
