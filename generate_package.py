@@ -1,6 +1,6 @@
 """Generate a config file per participant.
 
-Participants come from: 
+Participants come from:
   - participants_default
   - CSV from Google Forms named form.csv in the same dir as the script
 """
@@ -59,7 +59,7 @@ def generate_file(participant):
     fname = participant + ".ini"
     fpath = pkg_dir / fname
 
-    config = configparser.ConfigParser()    
+    config = configparser.ConfigParser()
     config.read(fpath)
     section = "pet"
     if not config.has_section(section):
