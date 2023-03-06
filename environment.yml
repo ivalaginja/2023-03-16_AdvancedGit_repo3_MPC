@@ -8,4 +8,5 @@ dependencies:
   - flake8
   - numpy
   - pandas
+  - pytest
   - python=3.9
