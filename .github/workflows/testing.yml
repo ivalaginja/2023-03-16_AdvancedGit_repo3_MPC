@@ -1,0 +1,42 @@
+name: Testing
+
+on:
+  workflow_dispatch:
+    branches:
+      - main
+  pull_request:
+    types: [review_requested, ready_for_review]
+    branches:
+    - main
+
+jobs:
+  pytest:
+    name: Pytests on Python ${{ matrix.python-version }} and ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      max-parallel: 1
+      matrix:
+        python-version: ['3.9']
+        os: [ubuntu-latest]
+    steps:
+    - uses: actions/checkout@v1
+      with:
+        lfs: true
+    - uses: actions/setup-python@v1
+      with:
+          python-version: ${{ matrix.python-version }}
+    - uses: conda-incubator/setup-miniconda@v2
+      with:
+          auto-update-conda: true
+          auto-activate-base: false
+    - name: Install dependencies
+      run: |
+        sed -E 's/[ \t]*-[ \t]*python[=<>0-9.,]*/  - python=${{ matrix.python-version }}/' environment.yml > environment2.yml
+        conda env create --name ci-env --file environment2.yml
+        conda activate ci-env
+      shell: bash -l {0}
+    - name: Test with pytest
+      run: |
+        conda activate ci-env
+        pytest
+      shell: bash -l {0}
