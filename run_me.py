@@ -5,8 +5,8 @@ import numpy as np
 def circle_mask(im, xc, yc, rcirc):
     """Create a circular aperture centered on (xc, yc) with radius rcirc."""
     x, y = np.shape(im)
-    newy, newx = np.mgrid[:y,:x]
-    circ = (newx-xc)**2 + (newy-yc)**2 < rcirc**2
+    newy, newx = np.mgrid[:y, :x]
+    circ = (newx - xc)**2 + (newy - yc)**2 < rcirc**2
     return circ.astype('float')
 
 
@@ -32,7 +32,7 @@ def padcplx(c, pad=5):
 
 def zoom(im, x, y, bb):
     """Cut out a square box from image im centered on (x,y) with half-box size bb."""
-    return im[y-bb:y+bb, x-bb:x+bb]
+    return im[y - bb:y + bb, x - bb:x + bb]
 
 
 if __name__ == '__main__':
