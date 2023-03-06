@@ -6,7 +6,10 @@ With this repository, we  will be learning how to manage several active branches
 see how merge conflicts arise, how to solve them, and how to work in a way that tries to avoid them in the first place, 
 as best as possible.
 
-We will also work through an example that shows how to provide a "conda recipe" for a Python installation that 
+Further, we will see how pull requests can be used to perform regular testing of code before it gets merged into
+your main branch.
+
+Finally, we will work through an example that shows how to provide a "conda recipe" for a Python installation that 
 is needed to run the code on your repository.
 
 For further info, please contact:
