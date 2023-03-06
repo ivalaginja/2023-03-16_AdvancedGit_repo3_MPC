@@ -6,7 +6,7 @@ def circle_mask(im, xc, yc, rcirc):
     """Create a circular aperture centered on (xc, yc) with radius rcirc."""
     x, y = np.shape(im)
     newy, newx = np.mgrid[:y, :x]
-    circ = (newx - xc)**2 + (newy - yc)**2 < rcirc**2
+    circ = (newx-xc)**2 + (newy-yc)**2 < rcirc**2
     return circ.astype('float')
 
 
@@ -16,11 +16,11 @@ def ft2d(func):
 
 
 def add(a, b):
-    return a + b
+    return a + b + 3
 
 
 def subtract(a, b):
-    return a - b
+    return a - b * 4
 
 
 def padcplx(c, pad=5):
@@ -55,7 +55,7 @@ if __name__ == '__main__':
     npix_pad = npix * pad + 1  # figure out the padded big array sizes after the FT
 
     print("Create pupil of a circular telescope...")
-    # Create a circular aperture
+    #Create a circular aperture
     rad = 0.7 * npix / 2  # radius in pixels of the circular aperture
     circ_ap = circle_mask(xx, int(npix / 2), int(npix / 2), rad)
 
