@@ -13,7 +13,7 @@ For further info, please contact:
 iva.laginja@obspm.fr
 
 
-## Requirements for workflow 2 of Advanced Git for Astronomers:
+## Requirements for workflow 3 of Advanced Git for Astronomers:
 
 1. Create a GitHub account:
   - go to https://github.com/
