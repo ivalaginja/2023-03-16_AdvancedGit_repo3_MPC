@@ -68,7 +68,7 @@ if __name__ == '__main__':
     plt.title('Pupil plane')
 
     plt.subplot(1, 2, 2)
-    plt.imshow(np.real(circ_ft_zoom), cmap='inferno', origin='lower')
+    plt.imshow(np.log10(np.abs(circ_ft_zoom)**2), cmap='inferno', origin='lower')
     plt.colorbar()
     plt.title('Focal plane')
 
