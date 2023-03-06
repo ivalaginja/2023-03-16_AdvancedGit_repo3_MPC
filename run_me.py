@@ -15,6 +15,14 @@ def ft2d(func):
     return ft
 
 
+def add(a, b):
+    return a + b
+
+
+def subtract(a, b):
+    return a - b
+
+
 def padcplx(c, pad=5):
     """Puts a Complex array in the centre of a zero-filled Complex array.
     pad defines the padding multiplier for the output array."""
