@@ -31,11 +31,3 @@ https://forms.gle/CkofT5ASMpfYCYN17
   - when you open the app for the first time it will prompt you to sign in - use your GitHub account for this, and 
   the email you used to create your GitHub account
   
-3. Install conda:
-  - On **Windows**:
-    1. Go to the Miniconda website and install miniconda for Python 3.7 for your respective OS: https://docs.conda.io/en/latest/miniconda.html
-    2. Make sure to add Miniconda to your PATH during the installation, even if it is marked as not recommended. This is required so that Git Bash can recognise it (see next point).
-    3. Install Git Bash from here: https://gitforwindows.org/
-    
-  - On **MacOS**/**Linux**:
-    1. Go to the Miniconda website and install miniconda for Python 3.7 for your respective OS: https://docs.conda.io/en/latest/miniconda.html
