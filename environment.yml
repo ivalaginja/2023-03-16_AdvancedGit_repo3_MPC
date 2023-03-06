@@ -5,6 +5,7 @@
 name: advanced-git
 dependencies:
   - matplotlib
+  - flake8
   - numpy
   - pandas
   - python=3.9
