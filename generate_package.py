@@ -14,7 +14,6 @@ import pandas as pd
 
 participants_default = [
     "ivalaginja",
-    "pablordrrbl",
 ]
 
 # Add user000 till nusers as backup
@@ -51,7 +50,7 @@ pkg_dir.mkdir(parents=True, exist_ok=True)
 # Read the participants' Github handles from the form
 form = base_dir / "form.csv"
 responses = pd.read_csv(form)
-participants = responses["GitHub handle"].to_list()
+participants = responses["GitHub handle (this is NOT a captcha - put in *your* handle)"].to_list()
 participants.extend(participants_default)
 
 
