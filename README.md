@@ -12,9 +12,6 @@ is needed to run the code on your repository.
 For further info, please contact:
 iva.laginja@obspm.fr
 
-If you want to sign up for announcements about further instalments of our git courses, feel free to sign up for notifications here (Google form):
-https://forms.gle/CkofT5ASMpfYCYN17
-
 
 ## Requirements for workflow 2 of Advanced Git for Astronomers:
 
