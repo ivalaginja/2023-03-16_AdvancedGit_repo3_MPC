@@ -37,6 +37,7 @@ def zoom(im, x, y, bb):
 
 if __name__ == '__main__':
 
+    print("Set up image grid...")
     npix = 512
 
     lin = np.linspace(-0.5, 0.5, npix)
@@ -45,13 +46,16 @@ if __name__ == '__main__':
     pad = 5  # factor by how much do we pad our images before performing a FT
     npix_pad = npix * pad + 1  # figure out the padded big array sizes after the FT
 
+    print("Create pupil of a circular telescope...")
     # Create a circular aperture
     rad = 0.7 * npix / 2  # radius in pixels of the circular aperture
     circ_ap = circle_mask(xx, int(npix / 2), int(npix / 2), rad)
 
+    print("Calculate the telescopes point-spread-function (PSF)...")
     # Calculate the Fourier transform, after padding
     circ_ft = ft2d(padcplx(circ_ap))
 
+    print("Plot and save to disk...")
     # Plot
     zoomfac = 30  # half-size of the zoom box will be 1/zoomfac of total image
     box = int(npix_pad / zoomfac)
@@ -68,8 +72,9 @@ if __name__ == '__main__':
     plt.title('Pupil plane')
 
     plt.subplot(1, 2, 2)
-    plt.imshow(np.real(circ_ft_zoom), cmap='inferno', origin='lower')
+    plt.imshow(np.log10(np.abs(circ_ft_zoom)**2), cmap='inferno', origin='lower')
     plt.colorbar()
     plt.title('Focal plane')
 
     plt.savefig('fourier_transform_result.pdf')
+    print("All done.")
